@@ -1,2 +1,2 @@
-let verdadero = true;
-let falso = false;
+// let verdadero = true;
+// let falso = false;

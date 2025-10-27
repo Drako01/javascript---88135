@@ -1,207 +1,247 @@
-// console.log(verdadero);
-// console.log(falso);
+// Funciones
 
-// Codicionales -> Son los que permiten que nuestro codigo tome decisiones
-// Estructura if
-// if(condicion) { // Solo permite ejecutar el bloque de codigo si es true
-//     se ejecuta todo lo que esta aca adentro
+// const numeroA = 1;
+// const numeroB = 2;
+
+// const resultado = numeroA + numeroB;
+
+// console.log("Felicitaciones el resultado es: "+resultado);
+
+// const numeroC = 10;
+// const numeroD = 25;
+
+// const resultado1 = numeroC + numeroD;
+
+// console.log("Felicitaciones el resultado es: "+resultado1);
+
+// const numeroE = 100;
+// const numeroF = 205;
+
+// const resultado2 = numeroE + numeroF;
+
+// console.log("Felicitaciones el resultado es: "+resultado2);
+
+// Declaramos la funcion
+// Declara la variable GLOBAL resultado
+// let resultado = 0;
+
+// function sumarDosNumerosProporcionadosPorElUsuario() {
+//     const numeroA = parseFloat(prompt("Ingrese un numero A"));
+//     const numeroB = parseFloat(prompt("Ingrese un numero B"));
+//     //const resultado = numeroA + numeroB; // En este momento la variable/constante resultado es local
+//     resultado = numeroA + numeroB; // Reasignacion dentro de la funcion
+//     console.log("Felicitaciones el resultado es: "+resultado);
 // }
 
-// if (verdadero){
-//     console.log("El valor de verdad de verdadero es " + verdadero);
+// // Invocamos a la funcion las veces que se necesite
+// sumarDosNumerosProporcionadosPorElUsuario(); 
+// console.log("Felicitaciones el resultado de sumarDosNumerosProporcionadosPorElUsuario es: "+resultado);
+
+// alert("Vamos de nuevo");
+
+// sumarDosNumerosProporcionadosPorElUsuario(); 
+// console.log("Felicitaciones el resultado de sumarDosNumerosProporcionadosPorElUsuario es: "+resultado);
+
+
+// Declaramos las variables GLOBALES
+// let resultado = 0;
+// let numeroA = parseFloat(prompt("Ingrese un numero A"));
+// let numeroB = parseFloat(prompt("Ingrese un numero B"));
+
+// function sumarDosNumerosProporcionadosPorElUsuario(){
+//     resultado = numeroA + numeroB;
+//     console.log("Felicitaciones el resultado es: "+resultado);
+// }
+// function restarDosNumerosProporcionadosPorElUsuario(){
+//     resultado = numeroA - numeroB;
+//     console.log("Felicitaciones el resultado es: "+resultado);
+// }
+// function multiplicarDosNumerosProporcionadosPorElUsuario(){
+//     resultado = numeroA * numeroB;
+//     console.log("Felicitaciones el resultado es: "+resultado);
+// }
+// function dividirDosNumerosProporcionadosPorElUsuario(){
+//     resultado = numeroA / numeroB;
+//     if(numeroB !== 0) {
+//         console.log("Felicitaciones el resultado es: "+resultado);
+//     } else{
+//         alert("No se puede dividir por 0")
+//     }
+// }
+// sumarDosNumerosProporcionadosPorElUsuario();
+// restarDosNumerosProporcionadosPorElUsuario();
+// multiplicarDosNumerosProporcionadosPorElUsuario();
+// dividirDosNumerosProporcionadosPorElUsuario();
+// sumarDosNumerosProporcionadosPorElUsuario();
+// sumarDosNumerosProporcionadosPorElUsuario();
+// sumarDosNumerosProporcionadosPorElUsuario();
+// sumarDosNumerosProporcionadosPorElUsuario();
+
+
+// Funciones usando Parametros
+// Declaramos las variables GLOBALES
+// let resultado = 0;
+// let numeroA = parseFloat(prompt("Ingrese un numero A"));
+// let numeroB = parseFloat(prompt("Ingrese un numero B"));
+
+// function sumar(a, b) {
+//     resultado = a + b;
+//     console.log("Felicitaciones el resultado es: " + resultado);
+// }
+// function restar(a, b) {
+//     resultado = a - b;
+//     console.log("Felicitaciones el resultado es: " + resultado);
+// }
+// function multiplicar(a, b) {
+//     resultado = a * b;
+//     console.log("Felicitaciones el resultado es: " + resultado);
+// }
+// function dividir(a, b) {
+//     resultado = a / b;
+//     if (b !== 0) {
+//         console.log("Felicitaciones el resultado es: " + resultado);
+//     } else {
+//         alert("No se puede dividir por 0")
+//     }
 // }
 
-// if (!falso) {
-//     console.log("El valor de verdad de falso es " + falso);
+// // Al momento de la invocacion pasar los argumentos
+// sumar(numeroA, numeroB);
+// restar(numeroA, numeroB);
+// multiplicar(numeroA, numeroB);
+// dividir(numeroA, numeroB);
+
+
+// Intentemos crear una Calculadora
+
+// let numeroA = parseFloat(prompt("Ingrese un numero A"));
+// let numeroB = parseFloat(prompt("Ingrese un numero B"));
+// let operacion = prompt("Ingrese la operacion");
+
+// function calcular(a, b, op) {
+//     const msgError = "No se puede dividir por cero";
+//     let resultado = 0;
+//     switch (op) {
+//         case "+":
+//             resultado = a + b;
+//             console.log("Felicitaciones el resultado de la suma es: " + resultado);
+//             break;
+//         case "-":
+//             resultado = a - b;
+//             console.log("Felicitaciones el resultado de la resta es: " + resultado);
+//             break;
+//         case "*":
+//             resultado = a * b;
+//             console.log("Felicitaciones el resultado de la multiplicacion es: " + resultado);
+//             break;
+//         case "/":
+//             resultado = a / b;
+//             if (b !== 0) {
+//                 console.log("Felicitaciones el resultado de la division es: " + resultado);
+//             } else {
+//                 alert(msgError);
+//                 console.error(msgError);
+//             }
+//             break;
+//         default:
+//             console.error("Error, Ingrese una Operacion valida");
+//     }
 // }
 
-// let condicion = false;
+// calcular(numeroA, numeroB, operacion);
 
-// if (condicion){
-//     console.log("El valor de verdad de condicion es " + condicion);
-// } else {
-//     console.log("El valor de verdad de condicion es " + condicion);
+
+// Funciones Anonimas (Siempre guarden las funciones en const)
+
+// const saludar = function(nombre){
+//     return "Hola, " + nombre + ", como estas?"; // Retorna un String
 // }
 
-// let stock = false;
-
-// if (stock) {
-//     console.log("Usted puede comprar");
-// } else {
-//     console.error("Error, no hay Stock");
+// const sumar = function(a,b){
+//     return a + b; // Evito generar una nueva variable llamada resultado por ejemplo
 // }
 
-// let edad = parseInt(prompt("Ingrese su Edad (Sin mentir)"));
-// const edadPermitida = 18;
+// console.log(saludar("Alejandro"))
+// console.log(saludar("Blas"))
+// console.log(sumar(12,55));
 
-// if (edad === edadPermitida) { // Estrictamente igual
-//     console.log("Puede pasar, porque tiene " + edadPermitida)
-// } else if (edad > edadPermitida) {
-//     console.log("Pase sin problema")
-// } else {
-//     console.error("Usted es menor de edad, no puede pasar")
+// // saludar = "Hola";
+
+// console.log(saludar("Mariana"))
+
+// Las funciones flecha tienen un return implicito, solo cuando se pasa
+// un parametro y la funcion en si no es compleja
+
+// Ejemplo:
+// const saludar = (nombre) => "Hola, " + nombre;
+// console.log(saludar("Alejandro"))
+// const sumarOConcatenar = (a,b) => a + b;
+// console.log(sumarOConcatenar("Hola", " mundo"));
+// console.log(sumarOConcatenar(10, 55));
+
+// Intentemos crear una Calculadora usando funcion flecha
+
+// let numeroA = parseFloat(prompt("Ingrese un numero A"));
+// let numeroB = parseFloat(prompt("Ingrese un numero B"));
+// let operacion = prompt("Ingrese la operacion");
+
+// const calcular = (a, b, op) =>{
+//     switch(op){
+//         case "+":
+//             return a + b;
+//         case "-":
+//             return a - b;
+//         case "*":
+//             return a * b;
+//         case "/":
+//             if(b === 0){
+//                 return "Error, no se puede dividir por cero";
+//             } else {
+//                 return a / b;
+//             }
+//         default:
+//             return "Error, operacion invalida";
+//     }
 // }
 
-// let numeroIngresado = parseInt(prompt("Ingrese un numero cualquiera"));
+// console.log(calcular(numeroA, numeroB, operacion));
 
-// // console.log(numeroIngresado)
 
-// if ( numeroIngresado > 0 ) {
-//     console.log("Usted ingreso un numero positivo")
-// } else if( numeroIngresado < 0 ){
-//     console.log("Usted ingreso un numero negativo");
-// } else if ( numeroIngresado === 0 ) {
-//     console.log("Usted ingreso el 0")
-// } else if (isNaN(numeroIngresado)) {
-//     console.warn("El valor ingresado no es un Numero")
-// } else {
-//     console.error("Error, Ud no ingreso nada")
+// Hacemos lo mismo pero usando un do while
+
+
+// const calcular = (a, b, op) => {
+//     switch (op) {
+//         case "+":
+//             return a + b;
+//         case "-":
+//             return a - b;
+//         case "*":
+//             return a * b;
+//         case "/":
+//             if (b === 0) {
+//                 return "Error, no se puede dividir por cero";
+//             } else {
+//                 return a / b;
+//             }
+//         default:
+//             return "Error, operacion invalida";
+//     }
 // }
-
-// let numeroA = 12;
-// let numeroB = "12";
-
-// if ( numeroA == numeroB ) { // Comparacion basica, comparo valor
-//     console.log("El numeroA es: " + numeroA + ", El numeroB es: " 
-//         + numeroB + ", entonces: Ambos numeros son 12")
-// } else {
-//     console.warn("Ojo, no son iguales")
-// }
-
-// if ( numeroA === numeroB ) { // Comparacion estricta, comparo valor y tipo de dato
-//     console.log("El numeroA es: " + numeroA + ", El numeroB es: " 
-//         + numeroB + ", entonces: Ambos numeros son 12")
-// } else {
-//     console.warn("Ojo, no son iguales")
-// }
-
-// let numeroA = 1;
-// let numeroB = 10;
-
-// let numeroIngresado = parseInt(prompt("Ingrese un numero cualquiera"));
-
-// // Si el numero esta entre el numeroA y el numeroB
-// if (numeroIngresado > numeroA && numeroIngresado < numeroB) {
-//     console.log( "El numero ingresado esta entre A y B")
-// } else {
-//     console.warn("Usted ingreso " + numeroIngresado + ", no cumple con la condicion")
-// }
-
-// ------------------------------------------------------------------------
-
-// let variable =  "Hola";
-
-// Ciclos por condicion
-
-// let nombreDelUsuario = prompt("Ingrese su nombre");
-
-// while(nombreDelUsuario === '' || !isNaN(nombreDelUsuario)) {
-//     alert("Ingrese un Nombre valido");
-//     nombreDelUsuario = prompt("Ingrese su nombre");
-// }
-// console.log("El nombre del usuario es: " + nombreDelUsuario);
-
-// let nombreDelUsuario;
-// let validacion;
+// let continuar;
 
 // do {
-//     nombreDelUsuario = prompt("Ingrese su nombre");
-//     validacion = nombreDelUsuario === '' || !isNaN(nombreDelUsuario) // Termina siendo Boolean
+//     let numeroA = parseFloat(prompt("Ingrese un numero A"));
+//     let numeroB = parseFloat(prompt("Ingrese un numero B"));
+//     let operacion = prompt("Ingrese la operacion");
 
-//     if(validacion){
-//         alert("Ingrese un Nombre valido");
-//     }
-// } while(validacion);
+//     alert(calcular(numeroA, numeroB, operacion));
 
-// console.log("El nombre del usuario es: " + nombreDelUsuario);
+//     continuar = prompt("¿Desea continuar? (si/no)").toLowerCase();
+// } while (continuar === 'si')
 
-// Ciclos por conteo
-
-// Ciclo for
-// for(let i = 0; i < 6; i++) {
-//     if(i === 0 ){
-//         console.log("Un mensaje que se esta ejecutando " + (i + 1) + " vez.!!");
-//     } else {
-//         console.log("Un mensaje que se esta ejecutando " + (i + 1) + " veces.!!");
-//     }
-// }
-
-// let palabra = "Hola Coders"; // 11 Caracteres
-// for(let i = 0; i < palabra.length; i++){ // Se ejecuto tantas veces como cantidad de caracteres tiene el String "palabra"
-//     console.log("Palabra")
-// }
-
-// Tabla de Verdad (logica proposiocional)
-// const V = true;
-// const F = false;
-
-// console.log("Tabla de Verdad del Operador && (Y)");
-// console.log(V && V); // Si ambos son V => true
-// console.log(V && F); // Si al menos uno de los valores es F => false
-// console.log(F && V); // Si al menos uno de los valores es F => false
-// console.log(F && F); // Si ambos de los valores son F => false
+// alert("Gracias por utilizar la Calculadora");
 
 
-// console.log("Tabla de Verdad del Operador || (O)");
-// console.log(V || V); // Si ambos son V => true
-// console.log(V || F); // Si al menos uno de los valores es V => true
-// console.log(F || V); // Si al menos uno de los valores es V => true
-// console.log(F || F); // Si ambos de los valores son F => false
 
-// console.log("Tabla de Verdad del Operador de Negación (!)");
-// console.log(!V); // Si no es Verdadero => false
-// console.log(!F); // Si no es False => true
 
-// Pedir al usuario que ingrese su mes de nacimiento, y vamos a mostrar su signo zodiacal
-
-// let mes; // Number
-// let condition; // Boolean
-// do{
-//     mes = parseInt(prompt("Ingrese el mes de su nacimiento (1-12)"));
-//     condition = isNaN(mes) || mes < 1 || mes > 12;
-//     if(condition){
-//         alert("Por favor, Ingrese un numero del 1 al 12")
-//     }
-
-// } while(condition);
-
-// switch(mes) {
-//     case 1:
-//         console.log("Tu signo es Capricornio o Acuario");
-//         break;
-//     case 2:
-//         console.log("Tu signo es Acuario o Pisis");
-//         break;
-//     case 3:
-//         console.log("Tu signo es Pisis o Aries");
-//         break;
-//     case 4:
-//         console.log("Tu signo es Aries o Tauro");
-//         break;
-//     case 5:
-//         console.log("Tu signo es Tauro o Geminis");
-//         break;
-//     case 6:
-//         console.log("Tu signo es Geminis o Cancer");
-//         break;
-//     case 7:
-//         console.log("Tu signo es Cancer o Leo");
-//         break;
-//     case 8:
-//         console.log("Tu signo es Leo o Virgo");
-//         break;
-//     case 9:
-//         console.log("Tu signo es Virgo o Libra");
-//         break;
-//     case 10:
-//         console.log("Tu signo es Libra o Escorpio");
-//         break;
-//     case 11:
-//         console.log("Tu signo es Escorpio o Sagitario");
-//         break;
-//     case 12:
-//         console.log("Tu signo es Sagitario o Capricornio");
-//         break;
-//     default:
-//         console.error("El numero ingresado es incorrecto");
-// }
