@@ -1,191 +1,217 @@
-// Unidad 4: Arrays y Objetos
-
-// const miArrayDeNumeros = [1, 2, 3, 5, 12];
-//              Indices= [0, 1, 2, 3, 4]; -> Indices de los elementos del Array
-
-// miArrayDeNumeros = 2;
-// console.log(miArrayDeNumeros)
-// console.log(typeof miArrayDeNumeros)
-// Los Arrays tienen sus propios metodos (funciones)
-// miArrayDeNumeros.push(5); // Agrega al final del Array
-// miArrayDeNumeros.push(545);
-// miArrayDeNumeros.push(45);
-
-// miArrayDeNumeros.pop(); // Elimina el ultimo elemento (con el indice mas alto)
-
-
-// Estos metodos modifican todos los indices del Array
-// miArrayDeNumeros.shift(); // Elimina el primer elemento (con el indice 0) -> Destructivo
-// miArrayDeNumeros.unshift(3); // Agrega al principio del Array -> Destructivo
-// Estos metodos modifican todos los indices del Array
-
-
-// console.log(miArrayDeNumeros)
-
-// console.log(miArrayDeNumeros.indexOf(0))
-
-
-// const miArrayDeNumeros = [1, 2, 3, 5, 12, 5, -8, 15];
-// console.log(miArrayDeNumeros)
-// console.log(miArrayDeNumeros.length) // Nos muestra la cantida de valores en numero entero que tiene nuestro Array
-
-
-// // console.log(miArrayDeNumeros[4])
-// const cantidad = miArrayDeNumeros.length;
-
-// for(let i = 0; i < cantidad; i++){
-//     console.log("Valor: " + miArrayDeNumeros[i])
-// }
-
-// console.log(miArrayDeNumeros.join(" + "));
-// console.log(miArrayDeNumeros.join(" | "));
-// console.log(miArrayDeNumeros.join(" / "));
-// console.log(miArrayDeNumeros.join(" "));
-// console.log(miArrayDeNumeros.join(""));
-
-
-// console.log(miArrayDeNumeros.indexOf(0)); // Retorna un numero entero -> Indice del Elemento -> Solo muestra el 1ro que encuentra
-// console.log(miArrayDeNumeros.includes(0)); // Retorna un Boleano si existe o no el elemento
-
-
-// const miArrayDeStrings = ["Hola", "Mundo", "CoderHouse"];
-// console.log(miArrayDeStrings.join(" - "))
-
-// for(let i = 0; i < miArrayDeStrings.length; i++){
-//     console.log("En el indice : " + i + " esta el valor " + miArrayDeStrings[i]);
-// }
-
-// console.log(miArrayDeStrings.includes("CoderHouse"));
-
-// console.log(miArrayDeStrings.sort()); // Ordena Alfabeticamente -> Cambia los indices del Array
-// console.log(miArrayDeStrings.sort().reverse()); // Ordena Alfabeticamente Invertido -> Cambia los indices del Array
-
 // Objetos
-
-// const producto = {
+// const persona1 = {
 //     id: 1,
-//     nombre: "Azucar",
-//     precio: 1200.50,
-//     stock: 20
+//     nombre: "Analia",
+//     apellido: "Gonzalez",
+//     edad: 25,
+//     email: "analia@mail.com"
 // };
-// console.log(typeof producto);
-// console.log(producto);
 
-// const productos = [
+// console.log(persona1);
+
+// const persona2 = {
+//     id: 2,
+//     nombre: "Mario",
+//     apellido: "Perez",
+//     edad: 35,
+//     email: "mario@mail.com"
+// };
+
+// const persona3 = {
+//     id: 3,
+//     nombre: "Maraiana",
+//     apellido: "Garcia",
+//     edad: 20,
+//     email: "mariana@mail.com"
+// };
+
+// // console.log(persona2);
+
+// function Persona(persona){ // Pasamos el objeto literal
+//     this.id = persona.id,
+//     this.nombre = persona.nombre,
+//     this.apellido = persona.apellido,
+//     this.edad = persona.edad,
+//     this.email = persona.email
+// }
+
+// const personaLiteral = new Persona(
 //     {
 //         id: 1,
-//         nombre: "Azucar",
-//         precio: 1200.50,
-//         stock: 20
-//     },
-//     {
-//         id: 2,
-//         nombre: "Yerba",
-//         precio: 2200.50,
-//         stock: 200
-//     },
-//     {
-//         id: 3,
-//         nombre: "Gaseosa",
-//         precio: 1800.50,
-//         stock: 500
-//     },
-//     {
-//         id: 4,
-//         nombre: "Harina",
-//         precio: 990.50,
-//         stock: 202
-//     }
-// ];
-
-// console.log(productos[0]);
-// console.log(productos[2].id);
-// console.log(productos[2].nombre);
-// console.log(productos[2].precio);
-// console.log(productos[2].stock);
-
-// console.log(productos);
-
-// productos.push(
-//     {
-//         id: 5,
-//         nombre: "Chocolate",
-//         precio: 6990.50,
-//         stock: 10     
+//         nombre: "Analia",
+//         apellido: "Gonzalez",
+//         edad: 25,
+//         email: "analia@mail.com"
 //     }
 // );
 
-// console.log(productos);
+// console.log(personaLiteral);
 
-// const productoImportado = {
-//         id: 6,
-//         nombre: "Chocolate Italiano",
-//         precio: 12990.50,
-//         stock: 100,
-//         origen: "Italia",
-//         codigo: "asdasdas"
+// const personaLiteral2 = new Persona(
+//     {
+//         id: 2,
+//         nombre: "Mario",
+//         apellido: "Perez",
+//         edad: 35,
+//         email: "mario@mail.com"
+//     }
+// );
+// console.log(personaLiteral2);
+
+// const personaLiteral3 = new Persona(persona3);
+// console.log(personaLiteral3);
+
+
+// function Persona(id, nombre, apellido, edad, email) { // Pasamos sus atriburos como parametros
+//         this.id = id,
+//         this.nombre = nombre,
+//         this.apellido = apellido,
+//         this.edad = edad,
+//         this.email = email
 // }
 
-// productos.push(productoImportado);
-// console.log(productos);
-// productos.push(
-//     {
-//         id: 7,
-//         nombre: "Chocolate Suizo",
-//         precio: 12990.50,
-//         stock: 100,
-//         origen: "Suecia",
-//         codigo: "CHS123"
-//     }
-// )
-// console.log(productos);
+// const persona = new Persona(1, "Alejandro", "Di Stefano", 49, "alejandro@mail.com");
 
-// const carrito = [];
+// persona.email = "nuevoemail@mail.com";
 
-// // carrito.push(productos);
+// persona['email'] = "nuevoemailconcorchete@mail.com";
 
-// carrito.push(productos[0], productos[2], productos[3]);
-// console.log(carrito);
+// console.log(persona);
 
-// Cuando quiero darle un formato Unico al Producto
+function Gato(nombre, edad, raza, color, peso) {
+    this.nombre = nombre,
+        this.edad = edad,
+        this.raza = raza,
+        this.color = color,
+        this.peso = peso
+}
 
-// Clases
+function Perro(nombre, edad, raza, color, peso) {
+    this.nombre = nombre,
+        this.edad = edad,
+        this.raza = raza,
+        this.color = color,
+        this.peso = peso
+}
 
-class Producto {
+const gatito = new Gato("Mishi", 4, "Gato", "Blanco", 3.5);
+console.log(gatito);
 
-    constructor(id, nombre, precio, stock, origen, codigo){
-        this.id = id;
-        this.nombre = nombre;
-        this.precio = precio;
-        this.stock = stock;
-        this.origen = origen;
-        this.codigo = codigo;
+const perrito = new Perro("Daisy", 4, "Yorky", "Beige", 3.5);
+console.log(perrito);
+
+class Mascota {
+    constructor(tipo, nombre, edad, raza, color, peso) { // Atributos -> Como es la mascota
+        this.tipo = tipo,
+        this.nombre = nombre,
+        this.edad = edad,
+        this.raza = raza,
+        this.color = color,
+        this.peso = peso
     }
 
-    sumarIVA() {
-        this.precio = parseFloat((this.precio * 1.21).toFixed(2));
+    // Metodos -> Que puede hacer la Mascota?
+    caminar() {
+        console.log(`Mi ${this.tipo} ${this.nombre} esta caminando.!`)
+    }
+
+    comer() {
+        console.log(`Mi ${this.tipo} ${this.nombre} esta comiendo.!`)
+    }
+
+}
+
+const perritoConClass = new Mascota("Perro", "Daisy", 4, "Yorky", "Beige", 3.5);
+const gatitoConClass = new Mascota("Gato", "Mishi", 4, "Gato", "Blanco", 3.5);
+console.log(perritoConClass);
+console.log(gatitoConClass);
+
+perritoConClass.caminar();
+gatitoConClass.caminar();
+perritoConClass.comer();
+gatitoConClass.comer();
+
+
+// Almacenamiento
+let mensaje = "Hola desde Coder";
+let mensaje2 = "Hola desde LocalStorage"
+
+// Guardar informacion en formato String
+localStorage.setItem("Mensaje", mensaje);
+localStorage.setItem("Mensaje2", mensaje2);
+localStorage.setItem("Numero" , 2);
+localStorage.setItem("Boleando", true);
+
+// Cuando queremos guardar Objetos, tenemos que convertirlos en formato String
+
+
+localStorage.setItem("Perro", perritoConClass);
+console.log(typeof perritoConClass); // Objeto
+console.log(typeof JSON.stringify(perritoConClass)); // String
+
+localStorage.setItem("Perro", JSON.stringify(perritoConClass));
+sessionStorage.setItem("Perro", JSON.stringify(perritoConClass));
+localStorage.setItem("Gato", JSON.stringify(gatitoConClass));
+
+const perritoLS = localStorage.getItem("Perro");
+
+console.log(typeof perritoLS);
+console.log(perritoLS);
+
+const perritoLSParceado = JSON.parse(localStorage.getItem("Perro"));
+
+console.log(typeof perritoLSParceado);
+console.log(perritoLSParceado);
+
+localStorage.removeItem("Boleando");
+localStorage.removeItem("Numero");
+localStorage.removeItem("Mensaje2");
+
+// localStorage.clear();
+
+const guardarEnElLocalStorage = (clave, valor) =>{
+    localStorage.setItem(clave, valor)
+}
+
+guardarEnElLocalStorage("Clave", "Valor");
+
+guardarEnElLocalStorage("Perrito", JSON.stringify(perritoConClass));
+
+localStorage.clear();
+
+const carrito = [];
+
+class Producto{
+    constructor(nombre, precio, cantidad){
+        this.nombre = nombre,
+        this.precio = precio,
+        this.cantidad = cantidad
     }
 }
 
-const productosUsandoClase = [];
-
-// Utilizamos la Clase Producto haciendo una Instancia para poder usar su Contructor
-productosUsandoClase.push(new Producto(1, "Azucar", 1900, 20, "Argentina", "AZ001"));
-productosUsandoClase.push(new Producto(2, "Yerba", 1650, 120, "Argentina", "YR001"));
-productosUsandoClase.push(new Producto(3, "Chocolate", 9650, 150));
-
-// productosUsandoClase.sumarIVA() // El metodo se aplica a cada elemento
-
-const productoX = new Producto(4, "Cocolate Italiano", 12990, 12, "Italia", "CHI001");
-
-productosUsandoClase.push(productoX);
-
-for(const producto of productosUsandoClase){
-    producto.sumarIVA();
-    console.log(`El producto con ID: ${producto.id} es: 
-        ${producto.nombre}. - El precio de ${producto.nombre} 
-        es $${producto.precio}.- y existen en Stock: ${producto.stock} 
-        Unidades. Origen: ${producto.origen}`);
+function eliminarProductoPorIndice(indice){
+    if(indice >= 0 && indice < carrito.length){
+        const eliminado = carrito.splice(indice, 1);
+        guardarEnElLocalStorage("carrito", JSON.stringify(carrito));
+        console.log(`${eliminado[0].nombre} fue eliminado del Carrito`)
+    } else {
+        console.error("Indice fuera de rango")
+    }
 }
 
-console.table(productosUsandoClase);
+
+const producto1 = new Producto("Chocolate", 15000, 2);
+const producto2 = new Producto("Gaseosa", 1800, 3);
+const producto3 = new Producto("Manteca", 1550, 1);
+
+carrito.push(producto1);
+carrito.push(producto2);
+carrito.push(producto3);
+
+eliminarProductoPorIndice(1);
+eliminarProductoPorIndice(1);
+eliminarProductoPorIndice(0);
+
+guardarEnElLocalStorage("carrito", JSON.stringify(carrito));
+
+// localStorage.removeItem("carrito");
