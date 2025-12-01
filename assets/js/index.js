@@ -1,246 +1,169 @@
-// Clase 06
+// console.log(document)
+// console.log(document.getElementsByTagName('title')[0])
 
-// Funciones de Orden Superior
+// let titulo = document.getElementsByTagName('title')[0].innerText;
+let titulo = document.getElementsByTagName('title')[0];
+let h1Title = document.getElementById('titulo').innerText;
+const titulos = ["Titulo 1", "Titulo 2", "Titulo 3"];
 
-// function operarNumeros(a, b, operacion){
-//     return operacion(a,b);
-// }
+// titulo.innerText = titulos[2];
+titulo.innerText = h1Title;
+// console.log(titulo);
 
-// const operarNumeros = (a, b, operacion) => operacion(a, b);
+const cuerpo = document.body;
 
-// // Definimos las Operaciones
-// const suma = (x, y) => x + y;
-// const resta = (x, y) => x - y;
-// const multiplicacion = (x, y) => x * y;
-// const division = (x, y) => {
-//     if (y === 0) {
-//         return "Error, No se puede dividir por Cero"
-//     }
+// console.log(cuerpo)
 
-//     return x / y;
-// };
+const contenedores = document.getElementsByClassName('contenedor');
+// console.log(contenedores);
+// contenedores[0].innerHTML = "<h2>Contenedor <strong>Modificado</strong> 2</h2>";
 
-// console.log(operarNumeros(5, 52, suma));
-// console.log(operarNumeros(5, 52, resta));
-// console.log(operarNumeros(5, 52, multiplicacion));
-// console.log(operarNumeros(5, 52, division));
-// console.log(operarNumeros(5, 0, division));
+const personasArray = ["Alexis", "Alejandro", "Raul", "Valentina", "Vittorio", "Yeisi"];
 
-
-// Array
-
-// const myArray = [1, 2, 3];
-// // console.log(typeof myArray);
-// // myArray = 4;
-// // console.log(typeof myArray);
-
-// myArray.push(4);
-
-// console.log(myArray);
-// console.log(myArray[1]);
-// console.log(myArray.length); // Gallina Tiene Huevos
-
-// const myArrayString = ["Hola", "Mundo"];
-
-// myArrayString.push("Coder");
-// myArrayString.push("JavaScript");
-
-// console.log(myArrayString);
-// console.log(myArrayString.sort());
-
-// const myArray = [1, 2, 3, -5, 0, 55, 1212, -56, -36, 99, 100, 1025, -524, 0];
-// console.log(myArray);
-
-// myArray.forEach((num) => {
-//     console.log(num);
-// })
-
-// myArray.forEach((num, i) => {
-//     console.log(`Para el Indice ${i}, el numero es: ${num}`);
-// })
-
-// myArray.forEach((num, i, array) => {
-//     array[i] = num * 2;
-// });
-
-// console.log(myArray);
-
-// const myArrayString = ["Hola", "Mundo", "Coder"];
-// console.log(myArrayString);
-
-// const inventario = {}; // Creamos un Objeto vacio -> Global
-
-// myArrayString.forEach((palabra, indice) => {
-//     inventario[indice] = palabra;
-// });
-
-// console.log(inventario);
-
-// Filter
-
-// const cursos = [
-//     { nombre: "JavaScript", precio: 180000 },
-//     { nombre: "React", precio: 190000 },
-//     { nombre: "Angular", precio: 210000 },
-//     { nombre: "SQL", precio: 90000 },
-//     { nombre: "BackEnd", precio: 360000 },
-// ];
-
-// console.log(cursos);
-
-// const cursosEconomicos = cursos.filter((curso) => curso.precio <= 180000);
-// const cursosCaros = cursos.filter((curso) => curso.precio > 200000);
-
-// console.log(cursosEconomicos);
-// console.log(cursosCaros);
-
-// const myArray = [1, 2, 3, -5, 0, 55, 1212, -56, -36, 99, 100, 1025, -524, 0];
-// const myArrayFiltrado = myArray.filter((num) => num > 10);
-// console.log(myArrayFiltrado);
-
-// Map
-
-// const frutas = ["Banana", "Pera", "Manzana", "Anana", "Frutilla"];
-
-// const frutasMayusculas = frutas.map((fruta) => fruta.toUpperCase());
-
-// console.log(frutas);
-// console.log(frutasMayusculas);
-
-// const myArray = [1, 2, 3, -5, 0, 55, 1212, -56, -36, 99, 100, 1025, -524, 0];
-// const myArrayDuplicado = myArray.map((num) => num * 2);
-// console.log(myArrayDuplicado);
-
-// const cursos = [
-//     { nombre: "JavaScript", precio: 180000 },
-//     { nombre: "React", precio: 190000 },
-//     { nombre: "Angular", precio: 210000 },
-//     { nombre: "SQL", precio: 90000 },
-//     { nombre: "BackEnd", precio: 360000 },
-// ];
-
-// console.log(cursos);
-
-// const nombresDeCursos = cursos.map((curso) => curso.nombre);
-// console.log(nombresDeCursos);
-
-// const preciosDeCursos = cursos.map((curso) => curso.precio);
-// console.log(preciosDeCursos);
-
-// const boleanos = [true, true, false, true, false, false, true, true, false];
-
-// console.log(boleanos);
-
-// const boleanoATexto = boleanos.map((valor) => {
-//     if (valor) {
-//         return "✅ Verdadero"
-//     } else {
-//         return "❌ Falso"
-//     }
-// });
-// console.log(boleanoATexto);
-
-// const productos = [
-//     {id: 1, nombre: "Azucar", precio: 1800, disponible: true},
-//     {id: 2, nombre: "Yerba", precio: 1900, disponible: true},
-//     {id: 3, nombre: "Cafe", precio: 3600, disponible: false},
-//     {id: 4, nombre: "Coca Cola", precio: 1800, disponible: true},
-//     {id: 5, nombre: "Pepsi", precio: 1750, disponible: false},
-//     {id: 6, nombre: "Harina", precio: 800, disponible: false},
-// ];
-
-// const stock = productos.map((producto) => {
-//     let disponibilidad = "";
-//     if(producto.disponible){
-//         disponibilidad = "Tiene Stock"
-//     } else {
-//         disponibilidad = "Sin Stock"
-//     }
-
-//     return `El Producto ${producto.nombre} ${disponibilidad} - Precio: $${producto.precio}.-`
-// });
-
-// console.log(stock);
-
-
-// Reduce
-
-// const myArray = [1, 2, 3, -5, 0, 55, 1212, -56, -36, 99, 100, 1025, -524, 0];
-
-// const sumaDeElementosDelArray = myArray.reduce((acumulador, numero) => acumulador + numero, 0);
-
-// console.log(sumaDeElementosDelArray);
-
-// const cursos = [
-//     { nombre: "JavaScript", precio: 180000 },
-//     { nombre: "React", precio: 190000 },
-//     { nombre: "Angular", precio: 210000 },
-//     { nombre: "SQL", precio: 90000 },
-//     { nombre: "BackEnd", precio: 360000 },
-// ];
-
-// const cursoObjeto = cursos.reduce((acc, curso) => {
-//     acc[curso.nombre] = curso.precio
-//     return acc
-// }, {});
-
-
-// console.log(cursos);
-// console.log(cursoObjeto);
-
-
-// const frutas = ["Banana", "Banana", "Banana", "Banana", "Banana", "Pera", "Pera", "Pera", "Manzana", "Anana", "Manzana", "Manzana", "Anana", "Frutilla"];
-
-// const frutasObjeto = frutas.reduce((acc, fruta) => {
-//     acc[fruta] = (acc[fruta] || 0) + 1
-//     return acc;
-// }, {})
-
-// console.log(frutasObjeto);
-
-const carrito = [
-    { id: 1, nombre: "Azucar", precio: 1800, disponible: true, cantidad: 6 },
-    { id: 2, nombre: "Yerba", precio: 1900, disponible: true, cantidad: 1 },
-    { id: 3, nombre: "Cafe", precio: 3600, disponible: false, cantidad: 2 },
-    { id: 4, nombre: "Coca Cola", precio: 1800, disponible: true, cantidad: 2 },
-    { id: 5, nombre: "Pepsi", precio: 1750, disponible: false, cantidad: 5 },
-    { id: 6, nombre: "Harina", precio: 800, disponible: false, cantidad: 10 },
-    { id: 7, nombre: "Azucar", precio: 1800, disponible: true, cantidad: 6 },
-];
-
-console.log(carrito);
-
-const resumenDeCarrito = carrito.reduce((acc, item) => {
-    if(acc[item.nombre]){
-        acc[item.nombre].cantidad += item.cantidad 
-    } else {
-        acc[item.nombre] = {
-            precio: item.precio,
-            cantidad: item.cantidad
-        }
+function cargarElementosAlDOM() {
+    const tituloLocal = "Personas Cargadas";
+    h1Title = tituloLocal;
+    let personasElement = document.getElementById('personas'); // Accede al UL del HTML
+    for (const persona of personasArray) {
+        let li = document.createElement('li'); // Crea un li por cada persona del Array
+        li.innerHTML = persona; // Asignamos dinamicamente cada persona del Array
+        personasElement.appendChild(li); // Agregarle al UL cada LI generado
     }
-    return acc
-}, {});
+}
 
-console.log(resumenDeCarrito);
+cargarElementosAlDOM();
 
-const productos = [
-    {id: 1, nombre: "Azucar", precio: 1800, disponible: true},
-    {id: 2, nombre: "Yerba", precio: 1900, disponible: true},
-    {id: 3, nombre: "Cafe", precio: 3600, disponible: false},
-    {id: 4, nombre: "Coca Cola", precio: 1800, disponible: true},
-    {id: 5, nombre: "Pepsi", precio: 1750, disponible: false},
-    {id: 6, nombre: "Harina", precio: 800, disponible: false},
+// Agregar una section al final del main
+// crear un Array de Objetos
+// Mostrar una lista con los datos del Array
+// a partir de una funcion
+
+
+
+const cargarObjetosDelArrayAlDOM = () => {
+    const arrayDeObjetos = [
+        {
+            id: 1,
+            nombre: "Azucar",
+            precio: 1250,
+            stock: 1500
+        }, {
+            id: 2,
+            nombre: "Yerba",
+            precio: 1950,
+            stock: 1356
+        }, {
+            id: 3,
+            nombre: "Coca Cola",
+            precio: 1800,
+            stock: 2000
+        }, {
+            id: 4,
+            nombre: "Pepsi",
+            precio: 1750,
+            stock: 1500
+        }
+    ];
+
+    let main = document.querySelector('#main');
+    let sectionDelMain = document.createElement('section');
+
+    let lista = document.createElement('ul');
+    lista.id = "productos-id"
+
+    arrayDeObjetos.forEach(objeto => {
+        let item = document.createElement('li');
+        item.textContent = `ID: ${objeto.id}, Nombre: ${objeto.nombre}, Precio: $${objeto.precio}.-, Stock: ${objeto.stock} unidades.`;
+        lista.appendChild(item);
+    })
+    sectionDelMain.appendChild(lista);
+    main.appendChild(sectionDelMain);
+}
+
+
+cargarObjetosDelArrayAlDOM();
+
+// Eventos
+let botonClick = document.querySelectorAll('.button_grey')[0];
+
+// console.log(botonClick)
+// console.log(botonClick.innerText)
+
+botonClick.addEventListener('click', () => {
+    // console.log("Me Hicieron Click");
+    cuerpo.style.backgroundColor = 'blue';
+    cuerpo.style.color = 'white';
+});
+
+contenedores[0].addEventListener('mouseover', () => {
+    let h4Cont = contenedores[0].querySelector('h4');
+    h4Cont.style.color = 'green';
+})
+
+contenedores[1].addEventListener('mouseover', () => {
+    let h4Cont = contenedores[1].querySelector('h4');
+    h4Cont.style.color = 'blue';
+})
+contenedores[2].addEventListener('mouseover', () => {
+    let h4Cont = contenedores[2].querySelector('h4');
+    h4Cont.style.color = 'red';
+})
+contenedores[3].addEventListener('mouseover', () => {
+    let h4Cont = contenedores[3].querySelector('h4');
+    h4Cont.style.color = 'yellow';
+})
+
+const arrayDeObjetos = [
+    {
+        id: 5,
+        nombre: "Azucar Negra",
+        precio: 1250,
+        stock: 1500
+    }, {
+        id: 6,
+        nombre: "Chocolate",
+        precio: 12550,
+        stock: 150
+    }, {
+        id: 7,
+        nombre: "Banana",
+        precio: 120,
+        stock: 150
+    }, {
+        id: 8,
+        nombre: "Manzana",
+        precio: 350,
+        stock: 500
+    },
 ];
 
-const productoBuscado = productos.find((producto) => producto.id === 3);
-const productoBuscadoPorNombre = productos.find((producto) => producto.nombre === 'Pepsi');
+let botonAgregar = document.querySelectorAll('.button_grey')[1];
 
-// const productoBuscadoPorDisponibilidad = productos.find((producto) => producto.disponible === true);
+let indiceObjeto = 0;
 
-console.log(productoBuscado);
-console.log(productoBuscadoPorNombre);
-// console.log(productoBuscadoPorDisponibilidad);
+botonAgregar.addEventListener('click', () => {
+    let listaProductos = document.querySelector('#productos-id');
+    if (indiceObjeto < arrayDeObjetos.length) {
+        let item = document.createElement('li');
+        const objeto = arrayDeObjetos[indiceObjeto];
 
-const hayProductoDisponible = productos.some((producto) => producto.disponible === true);
-console.log(hayProductoDisponible);
+        item.textContent = `ID: ${objeto.id}, Nombre: ${objeto.nombre}, Precio: $${objeto.precio}.-, Stock: ${objeto.stock} unidades.`;
+
+
+        listaProductos.appendChild(item);
+
+        indiceObjeto++;
+    } else {
+        alert("Todos los productos fueron agregados")
+    }
+})
+
+const footer = document.querySelector('#footer');
+
+let parrafoFooter = "Hola desde Coder";
+
+let parrafo = document.createElement('p');
+
+parrafo.innerText = parrafoFooter;
+
+footer.appendChild(parrafo);
