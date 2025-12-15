@@ -257,6 +257,8 @@ body.dark-mode {
     flex-wrap: wrap;
     gap: 2rem;
     padding: 4rem;
+    max-width: calc(100vw - 8rem);
+    margin: 0 auto;
 }
 .card{
     align-items: center;
@@ -264,4 +266,13 @@ body.dark-mode {
 .card img{
     width: 16rem;
     padding: .5rem;
+}
+
+body.dark{
+    background-color: rgb(28, 28, 28);
+    color: rgb(234, 234, 234);
+}
+
+#toggle-dark-mode{
+    margin: 2rem 3rem;
 }
